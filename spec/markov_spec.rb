@@ -35,7 +35,10 @@ describe Markov do
       example_string = "this is a test of this system and its various bits and pieces"
       @markov.ingest(example_string)
       generated_string = @markov.generate(3)
+      # I'd like to possibly mock this out so I can actually test for a real string
+      # currently I'm just making sure its not empty
       expect(generated_string.size).to_not eql(0)
+      # expected output looks like: "test of this" or "systeme and its" for the given text
     end
   end
 end

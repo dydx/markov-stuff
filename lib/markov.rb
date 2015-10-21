@@ -16,9 +16,7 @@ class Markov
     end
     trained_set
   end
-
   def generate(length)
-    # this is running into problems on the last word.... how to handle?
     trained_set = self.train
     current_word = trained_set.keys.sample
     generated_string = ""
